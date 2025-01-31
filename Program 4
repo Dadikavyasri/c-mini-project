@@ -1,0 +1,42 @@
+4.AIM: 
+
+C program to check string palindrome with out using string handling functions
+source code:
+
+#include <stdio.h>
+
+int main() {
+    char str[100];
+    int start, end, k= 0;
+
+    printf("Enter a string: ");
+    scanf("%s", str);
+
+    while (str[k] != '\0') {
+        k++;
+    }
+
+    start = 0;
+    end = k-1;
+
+    
+    while (start < end) {
+        if (str[start] != str[end]) {
+            printf("%s is not a palindrome.\n", str);
+            return 0;
+        }
+        start++;
+        end--;
+    }
+
+    printf("%s is a palindrome.\n", str);
+
+    return 0;
+}
+
+INPUT:
+
+Enter a string: KAVYASRI
+OUTPUT:
+
+KAVYASRI is not a palindrome.
