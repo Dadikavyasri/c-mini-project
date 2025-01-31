@@ -1,0 +1,46 @@
+3.AIM: 
+
+C program to generate first N prime numbers where N is given by the user.
+source code:
+
+#include<stdio.h>
+
+int main()
+{
+	 int n, count=1, flag, i=2, j;
+	 printf("Enter how many prime numbers? \n");
+	 scanf("%d", &n);
+	
+	 /* Generating prime numbers */
+	 while(count <= n)
+	 {
+		  flag = 0;
+		  for(j=2; j <= i/2; j++)
+		  {
+			   if(i%j==0)
+			   {
+			    flag=1;
+			    break;
+			   }
+		  }
+		  if(flag==0)
+		  {
+			   printf("%d\t",i);
+			   count++;
+		  }
+		  i++;
+	 }
+	 return(0);
+}
+
+INPUT:
+
+Enter how many prime numbers? 
+9
+
+OUTPUT:
+
+2 	3	5	7	11	13	17	19	23	
+
+
+
